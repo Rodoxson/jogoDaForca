@@ -68,7 +68,7 @@ Substitua PALAVRA pela palavra que deseja que o jogador adivinhe.
   . Informe letras e tente adivinhar a palavra antes que o boneco seja desenhado completamente.
 
 ## Arquitetura do Projeto
-
+```plaintext
   src/
 ├── dio/
 │   └── br/
@@ -81,7 +81,7 @@ Substitua PALAVRA pela palavra que deseja que o jogador adivinhe.
 │           │   ├── GameIsFinishedException.java
 │           │   └── LetterAlreadyInputedException.java
 │           └── Main.java                    # Classe principal com interface do jogo
-
+```
 
 ## Estrutura de Código
 
@@ -112,7 +112,7 @@ Substitua PALAVRA pela palavra que deseja que o jogador adivinhe.
 . LetterAlreadyInputedException — lançada ao tentar informar uma letra já digitada.
 
 ## Exemplo de Execução
-
+```plaintext
 . Bem vindo ao jogo da forca, tente adivinhar a palavra, boa sorte!
 
   -----  
@@ -160,7 +160,7 @@ Tentativas erradas: [a]
 | 4          | Braço direito \    |   |
 | 5          | Perna esquerda /   |   |
 | 6          | Perna direita \    |   |
-
+```
 ## Contribuições
 
 ### Contribuições são bem-vindas!
