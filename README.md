@@ -1,7 +1,7 @@
 # Jogo da Forca - Proleto em Java
 
-![Hangman ASCII](https://raw.githubusercontent.com/your-repo/assets/hangman-ascii.png)  
-*Imagem ilustrativa do jogo da forca*
+![Jogo da Forca](./images/pngegg.png)
+ *Imagem ilustrativa do jogo da forca*
 
 ---
 
