@@ -141,9 +141,9 @@ a
 =========
 
 Tentativas erradas: [a]
-
+```
 ## Progressão do Boneco
-
+```plaintext
   -----  
   |   |
   |   |    O
@@ -161,6 +161,50 @@ Tentativas erradas: [a]
 | 5          | Perna esquerda /   |   |
 | 6          | Perna direita \    |   |
 ```
+
+## Script de Testes Automáticos
+. Para facilitar testes automatizados do jogo, você pode usar o script abaixo que simula tentativas de letras, incluindo erros e acertos.
+
+```java
+package dio.br.com;
+
+import dio.br.com.model.HangmanChar;
+import dio.br.com.model.HangmanGame;
+import dio.br.com.model.HangmanGameStatus;
+
+import java.util.List;
+
+public class HangmanTest {
+
+    public static void main(String[] args) {
+        String palavra = "teste";
+        List<HangmanChar> chars = palavra.chars()
+                .mapToObj(c -> new HangmanChar((char) c, false, 0))
+                .toList();
+
+        HangmanGame jogo = new HangmanGame(chars);
+
+        // Letras para tentar (algumas certas, outras erradas)
+        char[] tentativas = {'a', 'e', 't', 'x', 's', 'z', 'o'};
+
+        for (char c : tentativas) {
+            try {
+                jogo.inputCharacter(c);
+                System.out.println("Tentando letra: " + c);
+                System.out.println(jogo);
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+            if (jogo.getHangmanGameStatus() != HangmanGameStatus.PENDING) {
+                System.out.println("Jogo finalizado com status: " + jogo.getHangmanGameStatus());
+                break;
+            }
+        }
+    }
+}
+
+
+
 ## Contribuições
 
 ### Contribuições são bem-vindas!
