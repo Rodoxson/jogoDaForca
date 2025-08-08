@@ -1,4 +1,4 @@
-# Jogo da Forca - Proleto em Java
+# Jogo da Forca - Projeto em Java
 
 ![Jogo da Forca](./images/pngegg.png)
  *Imagem ilustrativa do jogo da forca*
